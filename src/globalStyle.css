@@ -12,6 +12,12 @@
 
 :root {
   --color-secondary: rgb(32, 180, 227);
+  /* --color-secondary: rgb(0, 195, 255); */
+  --color-secondary-variant: #ffd60a;
+  /* --color-secondary-variant: #ccae16; */
+  --color-primary: #fff;
+  --color-dark: #000814;
+  --color-dark-variant: #001d3d;
 }
 
 body {

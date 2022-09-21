@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const NavbarSection = styled.nav`
   height: 3.5rem;
   width: 100vw;
-  background: #000814;
+  background: var(--color-dark);
   color: #fff;
   display: grid;
   place-items: center;
@@ -49,19 +49,33 @@ export const NavbarLinks = styled.ul`
 `;
 
 export const NavbarLink = styled.li`
-  margin: 0 .8rem;
-  padding: 0.35rem .5rem;
+  margin: 0 0.8rem;
+  padding: 0.35rem 0.5rem;
   font-size: 16px;
   font-weight: normal;
   border-radius: 4px;
   ${NavLink} & {
     a {
-
     }
   }
   &:hover {
     background-color: var(--color-secondary);
+    cursor: pointer;
   }
 `;
 
-export const NavbarButton = styled.button``;
+export const NavbarButton = styled.button`
+  background: var(--color-secondary-variant);
+  width: fit-content;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .7rem 0.5rem;
+  color: var(--color-dark );
+  border-radius: 5px;
+
+  &:hover {
+    background: #ccae16;  
+    cursor: pointer;
+  }
+`;

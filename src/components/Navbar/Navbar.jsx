@@ -11,7 +11,7 @@ import {
 import NavbarImg from "../../images/jci-logo.png";
 import { nav_links } from "../../Data/navbar";
 import { NavLink } from "react-router-dom";
-
+import { HiUser } from 'react-icons/hi'
 const Navbar = () => {
   return (
     <NavbarSection>
@@ -29,7 +29,7 @@ const Navbar = () => {
               );
             })}
           </NavbarLinks>
-          <NavbarButton>Acceder</NavbarButton>
+          <NavbarButton><HiUser /> Acceder</NavbarButton>
         </NavbarMenu>
       </NavbarContainer>
     </NavbarSection>
