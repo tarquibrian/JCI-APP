@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavbarSection = styled.nav`
-  height: 3.5rem;
+  height: ${({ height }) => (height ? height : "55px")};
   width: 100vw;
-  background: var(--color-dark);
+  background: ${({ bgColor }) => (bgColor ? bgColor : "var(--color-dark)")};
   color: #fff;
   display: grid;
   place-items: center;
@@ -23,6 +23,7 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  background: tomato;
 `;
 
 export const NavbarLogo = styled(Link)`
@@ -64,18 +65,19 @@ export const NavbarLink = styled.li`
   }
 `;
 
-export const NavbarButton = styled.button`
-  background: var(--color-secondary-variant);
-  width: fit-content;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: .7rem 0.5rem;
-  color: var(--color-dark );
-  border-radius: 5px;
-
-  &:hover {
-    background: #ccae16;  
-    cursor: pointer;
+export const NavbarButton = styled(Link)`
+  button {
+    background: var(--color-secondary-variant);
+    width: fit-content;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.7rem 0.5rem;
+    color: var(--color-dark);
+    border-radius: 5px;
+    &:hover {
+      background: #ccae16;
+      cursor: pointer;
+    }
   }
 `;

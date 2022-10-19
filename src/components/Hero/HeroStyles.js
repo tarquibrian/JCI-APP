@@ -46,7 +46,6 @@ export const HeroImage = styled.img`
 `;
 
 export const HeroSearchTitle = styled.div`
-  
   text-align: center;
   h1 {
     font-size: 2rem;
@@ -84,9 +83,9 @@ export const HeroSearchInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .3rem;
+    gap: 0.3rem;
     padding: 0 1rem;
-    margin: 0 0 0 .5rem;
+    margin: 0 0 0 0.5rem;
     border-radius: 3px;
     outline: none;
     border: none;

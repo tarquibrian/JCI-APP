@@ -6,13 +6,16 @@ import {
   NavbarLinks,
   NavbarLink,
   NavbarButton,
-  NavbarMenu
+  NavbarMenu,
 } from "./NavbarStyles";
 import NavbarImg from "../../images/jci-logo.png";
 import { nav_links } from "../../Data/navbar";
 import { NavLink } from "react-router-dom";
-import { HiUser } from 'react-icons/hi'
-const Navbar = () => {
+import { HiUser } from "react-icons/hi";
+import { user_list } from "../../Data/users_list";
+
+export const Navbar = () => {
+  console.log(user_list[0]);
   return (
     <NavbarSection>
       <NavbarContainer>
@@ -29,11 +32,21 @@ const Navbar = () => {
               );
             })}
           </NavbarLinks>
-          <NavbarButton><HiUser /> Acceder</NavbarButton>
+          <NavbarButton to="/login">
+            <button>
+              <HiUser /> Acceder
+            </button>
+          </NavbarButton>
         </NavbarMenu>
       </NavbarContainer>
     </NavbarSection>
   );
 };
 
-export default Navbar;
+export const AdminNavbar = ({ headerSize }) => {
+  return (
+    <NavbarSection height={headerSize} bgColor="#e02b2b">
+      <NavbarContainer>NAVBAR ADMIN</NavbarContainer>
+    </NavbarSection>
+  );
+};
