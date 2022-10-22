@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const Panel__Section = styled.section`
-  color: black;
-  margin-left: ${({marginLeft}) => (marginLeft ? marginLeft : '300px')};
+
+  margin-left: ${({ marginLeft }) => (marginLeft ? marginLeft : "300px")};
+  border-top: 2px solid red;
   table {
-    width: 1200px;
+    /* width: 1200px; */
+    position: relative;
+    display: block;
     border-collapse: collapse;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: linear-gradient(45deg, #49a09d, #5f2c82);
+
+    /* @media screen and (max-width: 1500px) {
+      width: 100px;
+    } */
   }
 
   th,

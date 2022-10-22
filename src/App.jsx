@@ -11,26 +11,66 @@ import Actas from "./pages/Actas";
 import Profile from "./pages/Profile/Profile";
 import Dashboard from "./components/Dashboard/Dashboard";
 
+import WithPrivateRoute from "./routes/PrivateRoute";
+
 // import { GlobalStyle } from './globalStyles'
+import { AuthProvider } from "./context/authContext";
 
 function App() {
+  // console.log("process", import.meta.env);
   return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
         {/* <GlobalStyle/> */}
         {/* <Navbar /> */}
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="jci-home" element={<Profile />} />
-          <Route path="users" element={<Users />} />
-          <Route path="suscripciones" element={<Suscription />} />
-          <Route path="actas" element={<Actas />} />
-          <Route path="informes" element={<Informes />} />
+
+          <Route
+            path="/jci-home"
+            element={
+              <WithPrivateRoute>
+                <Profile />
+              </WithPrivateRoute>
+            }
+          />
+          <Route
+            path="users"
+            element={
+              <WithPrivateRoute>
+                <Users />
+              </WithPrivateRoute>
+            }
+          />
+          <Route
+            path="suscripciones"
+            element={
+              <WithPrivateRoute>
+                <Suscription />
+              </WithPrivateRoute>
+            }
+          />
+          <Route
+            path="actas"
+            element={
+              <WithPrivateRoute>
+                <Actas />
+              </WithPrivateRoute>
+            }
+          />
+          <Route
+            path="informes"
+            element={
+              <WithPrivateRoute>
+                <Informes />
+              </WithPrivateRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 

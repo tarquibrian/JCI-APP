@@ -1,13 +1,14 @@
 import Dashboard from "../../components/Dashboard/Dashboard";
-import Panel from "../../components/Panel/Panel";
+import PanelBody from "../../components/PanelBody/PanelBody";
+// import Panel from "../../components/Panel/Panel";
 
 const Users = () => {
   return (
     <>
       <Dashboard />
-      <Panel>
+      <PanelBody>
         <h1>USERS</h1>
-      </Panel>
+      </PanelBody>
     </>
   );
 };

@@ -1,10 +1,7 @@
 import React from "react";
-import { Dashboard__Section } from "../../components/Dashboard/DashboardStyles";
-import { Panel__Section } from "../../components/Panel/PanelStyles";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { BsCheckLg } from "react-icons/bs";
 import Dashboard from "../../components/Dashboard/Dashboard";
-import Panel from "../../components/Panel/Panel";
 
 const Suscription = () => {
   const suscripciones__colection = [
@@ -63,8 +60,7 @@ const Suscription = () => {
 
   return (
     <>
-      <Dashboard />
-      <Panel>
+      <Dashboard>
         <h1>SUSCRIPCIONES</h1>
         <br />
         <table>
@@ -125,7 +121,181 @@ const Suscription = () => {
             })}
           </tbody>
         </table>
-      </Panel>
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="100%">SUSCRIPCIONES</th>
+            </tr>
+            <tr>
+              <th>Nombre</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Septiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {suscripciones__colection.map((item, i) => {
+              return (
+                <>
+                  <tr>
+                    <td width="500px">
+                      <h1>{item.name}</h1>
+                    </td>
+                    <td>
+                      {item.enero ? (
+                        <>
+                          <label class="container">
+                            <input type="checkbox" checked={item.enero} />
+                            <span class="checkmark"></span>
+                          </label>
+                        </>
+                      ) : (
+                        <h1>-</h1>
+                      )}
+                    </td>
+                    <td>{item.febrero ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.marzo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.abril ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.mayo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.junio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.julio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.agosto ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.septiembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.octubre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.noviembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.diciembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                  </tr>
+                </>
+              );
+            })}
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="100%">SUSCRIPCIONES</th>
+            </tr>
+            <tr>
+              <th>Nombre</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Septiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {suscripciones__colection.map((item, i) => {
+              return (
+                <>
+                  <tr>
+                    <td width="500px">
+                      <h1>{item.name}</h1>
+                    </td>
+                    <td>
+                      {item.enero ? (
+                        <>
+                          <label class="container">
+                            <input type="checkbox" checked={item.enero} />
+                            <span class="checkmark"></span>
+                          </label>
+                        </>
+                      ) : (
+                        <h1>-</h1>
+                      )}
+                    </td>
+                    <td>{item.febrero ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.marzo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.abril ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.mayo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.junio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.julio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.agosto ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.septiembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.octubre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.noviembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.diciembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                  </tr>
+                </>
+              );
+            })}
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="100%">SUSCRIPCIONES</th>
+            </tr>
+            <tr>
+              <th>Nombre</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Septiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {suscripciones__colection.map((item, i) => {
+              return (
+                <>
+                  <tr>
+                    <td width="500px">
+                      <h1>{item.name}</h1>
+                    </td>
+                    <td>
+                      {item.enero ? (
+                        <>
+                          <label class="container">
+                            <input type="checkbox" checked={item.enero} />
+                            <span class="checkmark"></span>
+                          </label>
+                        </>
+                      ) : (
+                        <h1>-</h1>
+                      )}
+                    </td>
+                    <td>{item.febrero ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.marzo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.abril ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.mayo ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.junio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.julio ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.agosto ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.septiembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.octubre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.noviembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                    <td>{item.diciembre ? <BsCheckLg /> : <h1>-</h1>}</td>
+                  </tr>
+                </>
+              );
+            })}
+          </tbody>
+        </table>
+      </Dashboard>
     </>
     // <Dashboard__Section>
     //   <Sidebar />

@@ -7,8 +7,11 @@ import {
   NavbarLink,
   NavbarButton,
   NavbarMenu,
+  NavbarProfile,
+  NavbarOptions,
 } from "./NavbarStyles";
 import NavbarImg from "../../images/jci-logo.png";
+import profileImg from "../../images/profile.jpg";
 import { nav_links } from "../../Data/navbar";
 import { NavLink } from "react-router-dom";
 import { HiUser } from "react-icons/hi";
@@ -46,7 +49,24 @@ export const Navbar = () => {
 export const AdminNavbar = ({ headerSize }) => {
   return (
     <NavbarSection height={headerSize} bgColor="#e02b2b">
-      <NavbarContainer>NAVBAR ADMIN</NavbarContainer>
+      <NavbarContainer>
+        <NavbarLogo>
+          <img src={NavbarImg} alt="junior chamber international" />
+        </NavbarLogo>
+
+        <NavbarOptions>
+          <ul>
+            <li>option1</li>
+            <li>option2</li>
+            <li>option3</li>
+          </ul>
+        </NavbarOptions>
+
+        <NavbarProfile>
+          <h2>Maria Aguirre Salazar</h2>
+          <img src={profileImg} alt="junior chamber international" />
+        </NavbarProfile>
+      </NavbarContainer>
     </NavbarSection>
   );
 };

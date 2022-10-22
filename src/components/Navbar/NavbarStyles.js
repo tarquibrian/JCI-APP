@@ -2,35 +2,43 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavbarSection = styled.nav`
-  height: ${({ height }) => (height ? height : "55px")};
-  width: 100vw;
-  background: ${({ bgColor }) => (bgColor ? bgColor : "var(--color-dark)")};
+  height: ${({ height }) => (height ? height : "100px")};
+  /* width: 100%; */
+  /* max-width: 1920px; */
+  /* background: ${({ bgColor }) =>
+    bgColor ? bgColor : "var(--color-dark)"}; */
   color: #fff;
   display: grid;
   place-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1;
+
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #ffffff40;
+  /* background: rgba(32, 180, 227, 0.6); */
+  /* background: var(--navbarAdminColor); */
 `;
 
 export const NavbarContainer = styled.div`
   /* background: tomato; */
-  width: 80%;
-  max-width: 1500px;
+  width: 100%;
+  /* max-width: 1500px; */
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: tomato;
+  /* background: tomato; */
 `;
 
 export const NavbarLogo = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 300px;
+  height: 100%;
   img {
     width: 5rem;
   }
@@ -80,4 +88,34 @@ export const NavbarButton = styled(Link)`
       cursor: pointer;
     }
   }
+`;
+
+export const NavbarOptions = styled.div`
+  color: black;
+  ul {
+    display: flex;
+    li {
+      margin: 0 1rem;
+    }
+  }
+`;
+
+export const NavbarProfile = styled.div`
+  color: var(--fontDarkColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  img {
+    border-radius: 50%;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+  
 `;
