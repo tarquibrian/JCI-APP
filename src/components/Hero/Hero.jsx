@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import {
   HeroSection,
@@ -43,7 +44,11 @@ const Hero = () => {
           </HeroSearchInput>
           <HeroSearchContent>
             <HeroSearchContentCategories></HeroSearchContentCategories>
-            <HeroSearchContentResults></HeroSearchContentResults>
+            <HeroSearchContentResults>
+              <Link to="/login">
+                <button>hola</button>
+              </Link>
+            </HeroSearchContentResults>
           </HeroSearchContent>
         </HeroSearch>
       </HeroContainer>
