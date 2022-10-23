@@ -13,62 +13,62 @@ import Dashboard from "./components/Dashboard/Dashboard";
 
 import WithPrivateRoute from "./routes/PrivateRoute";
 
-// import { GlobalStyle } from './globalStyles'
-import { AuthProvider } from "./context/authContext";
+import { AuthProvider, useAut } from "./context/authContext";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
 
 function App() {
-  // console.log("process", import.meta.env);
   return (
     <AuthProvider>
       <BrowserRouter>
-        {/* <GlobalStyle/> */}
-        {/* <Navbar /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+        <ThemeProvider theme={theme}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
 
-          <Route
-            path="/jci-home"
-            element={
-              <WithPrivateRoute>
-                <Profile />
-              </WithPrivateRoute>
-            }
-          />
-          <Route
-            path="users"
-            element={
-              <WithPrivateRoute>
-                <Users />
-              </WithPrivateRoute>
-            }
-          />
-          <Route
-            path="suscripciones"
-            element={
-              <WithPrivateRoute>
-                <Suscription />
-              </WithPrivateRoute>
-            }
-          />
-          <Route
-            path="actas"
-            element={
-              <WithPrivateRoute>
-                <Actas />
-              </WithPrivateRoute>
-            }
-          />
-          <Route
-            path="informes"
-            element={
-              <WithPrivateRoute>
-                <Informes />
-              </WithPrivateRoute>
-            }
-          />
-        </Routes>
+            <Route
+              path="/jci-home"
+              element={
+                <WithPrivateRoute>
+                  <Profile />
+                </WithPrivateRoute>
+              }
+            />
+            <Route
+              path="users"
+              element={
+                <WithPrivateRoute>
+                  <Users />
+                </WithPrivateRoute>
+              }
+            />
+            <Route
+              path="suscripciones"
+              element={
+                <WithPrivateRoute>
+                  <Suscription />
+                </WithPrivateRoute>
+              }
+            />
+            <Route
+              path="actas"
+              element={
+                <WithPrivateRoute>
+                  <Actas />
+                </WithPrivateRoute>
+              }
+            />
+            <Route
+              path="informes"
+              element={
+                <WithPrivateRoute>
+                  <Informes />
+                </WithPrivateRoute>
+              }
+            />
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
     </AuthProvider>
   );

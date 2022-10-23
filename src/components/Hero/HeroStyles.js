@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeroSection = styled.section`
-  margin-top: 3.5rem;
+  /* margin-top: 3.5rem; */
   /* height: 55vh; */
   /* overflow: hidden; */
   /* height: 100%;
@@ -10,7 +10,7 @@ export const HeroSection = styled.section`
 `;
 
 export const HeroContainer = styled.div`
-  height: 65vh;
+  height: 60vh;
   width: 100%;
   position: relative;
   /* display: grid;

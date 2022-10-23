@@ -2,45 +2,42 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavbarSection = styled.nav`
-  height: ${({ height }) => (height ? height : "100px")};
-  /* width: 100%; */
-  /* max-width: 1920px; */
-  /* background: ${({ bgColor }) =>
-    bgColor ? bgColor : "var(--color-dark)"}; */
-  color: #fff;
-  display: grid;
-  place-items: center;
-  position: sticky;
+  display: block;
+  height: ${({ height }) => (height ? height : "80px")};
+  width: 100%;
+  /* background: ${({ bgColor }) => (bgColor ? "var(--color-dark)" : "")}; */
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-
-  backdrop-filter: blur(6px);
-  border-bottom: 2px solid #ffffff40;
+  /* ${({ theme }) => theme.mixins.flexBetween}; */
+  /* backdrop-filter: blur(6px); */
+  /* border-bottom: 2px solid #ffffff40; */
   /* background: rgba(32, 180, 227, 0.6); */
   /* background: var(--navbarAdminColor); */
 `;
 
 export const NavbarContainer = styled.div`
+  /* margin: auto; */
+  ${({ theme }) => theme.mixins.flexBetween}
   /* background: tomato; */
-  width: 100%;
+  /* width: 80%; */
   /* max-width: 1500px; */
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
-  /* background: tomato; */
 `;
 
 export const NavbarLogo = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
+  ${({ theme }) => theme.mixins.flexCenter};
+  /* background: red; */
   height: 100%;
+  position: relative;
   img {
+    /* background: #000; */
     width: 5rem;
+  }
+  &:hover {
+    border-bottom: 3px solid rgb(32, 180, 227);
   }
 `;
 
@@ -60,16 +57,19 @@ export const NavbarLinks = styled.ul`
 export const NavbarLink = styled.li`
   margin: 0 0.8rem;
   padding: 0.35rem 0.5rem;
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: normal;
   border-radius: 4px;
-  ${NavLink} & {
-    a {
+  a {
+    font-family: "Oswald";
+    color: var(--color-secondary);
+    font-weight: 500;
+    transition: 0.1s ease;
+    &:hover {
+      /* background-color: var(--color-secondary); */
+      color: white;
+      cursor: pointer;
     }
-  }
-  &:hover {
-    background-color: var(--color-secondary);
-    cursor: pointer;
   }
 `;
 
@@ -117,5 +117,4 @@ export const NavbarProfile = styled.div`
     width: 4rem;
     height: 4rem;
   }
-  
 `;

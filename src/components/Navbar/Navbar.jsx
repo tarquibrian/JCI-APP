@@ -18,9 +18,8 @@ import { HiUser } from "react-icons/hi";
 import { user_list } from "../../Data/users_list";
 
 export const Navbar = () => {
-  console.log(user_list[0]);
   return (
-    <NavbarSection>
+    <NavbarSection height='60px' bgColor>
       <NavbarContainer>
         <NavbarLogo to="/">
           <img src={NavbarImg} alt="junior chamber international" />

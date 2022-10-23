@@ -14,8 +14,11 @@ import {
 } from "./HeroStyles";
 import HeroImg from "../../images/reunion11.jpg";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useAut } from "../../context/authContext";
 
 const Hero = () => {
+  const { currentUser } = useAut();
+  console.log("user", currentUser);
   return (
     <HeroSection>
       <HeroContainer>
