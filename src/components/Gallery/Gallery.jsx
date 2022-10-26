@@ -23,100 +23,70 @@ const Gallery = () => {
   return (
     <div className="gallery-section">
       <div class="scrolling-image-container">
-        {/* <div>
-          <div>
-          <img src={cat1} alt="" />
-        </div>
-        <div>
-          <img src={cat2} alt="" />
-        </div>
-        <div>
-          <img src={cat3} alt="" />
-        </div>
-        <div>
-          <img src={cat5} alt="" />
-        </div>
-        <div>
-          <img src={cat1} alt="" />
-        </div>
-        <div>
-          <img src={cat2} alt="" />
-        </div>
-        <div>
-          <img src={cat3} alt="" />
-        </div>
-        <div>
-          <img src={cat4} alt="" />
-        </div>
-        <div>
-          <img src={cat5} alt="" />
-        </div>
-        </div> */}
-
         <div class="scrolling-image1 imgSize">
           <figure className="item">
-            <img src={img2} alt="" loading="lazy" />
+            <img src={img2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={img1} alt="" loading="lazy" />
+            <img src={img1} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={img3} alt="" loading="lazy" />
+            <img src={img3} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={img2} alt="" loading="lazy" />
+            <img src={img2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={img1} alt="" loading="lazy" />
+            <img src={img1} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={img3} alt="" loading="lazy" />
+            <img src={img3} alt="" loading="lazy"/>
           </figure>
         </div>
         <div class="scrolling-image2 imgSize">
           <figure className="item">
-            <img src={cat2} alt="" loading="lazy" />
+            <img src={cat2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={cat4} alt="" loading="lazy" />
+            <img src={cat4} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={cat4} alt="" loading="lazy" />
+            <img src={cat4} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={cat2} alt="" loading="lazy" />
+            <img src={cat2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={cat4} alt="" loading="lazy" />
+            <img src={cat4} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={cat4} alt="" loading="lazy" />
+            <img src={cat4} alt="" loading="lazy"/>
           </figure>
         </div>
         <div class="scrolling-image3 imgSize">
           <figure className="item">
-            <img src={dog1} alt="" loading="lazy" />
+            <img src={dog1} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog2} alt="" loading="lazy" />
+            <img src={dog2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog3} alt="" loading="lazy" />
+            <img src={dog3} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog4} alt="" loading="lazy" />
+            <img src={dog4} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog1} alt="" loading="lazy" />
+            <img src={dog1} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog2} alt="" loading="lazy" />
+            <img src={dog2} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog3} alt="" loading="lazy" />
+            <img src={dog3} alt="" loading="lazy"/>
           </figure>
           <figure className="item">
-            <img src={dog4} alt="" loading="lazy" />
+            <img src={dog4} alt="" loading="lazy"/>
           </figure>
         </div>
       </div>

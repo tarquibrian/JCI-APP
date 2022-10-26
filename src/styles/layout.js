@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Global__Section = styled.section`
   max-width: 1920px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   /* box-shadow: rgba(0, 0, 0, 0.8) 0px 22px 70px 4px; */
   box-shadow: rgba(0, 0, 0, 0.8) 0px 54px 55px,

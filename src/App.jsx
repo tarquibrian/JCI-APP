@@ -16,12 +16,14 @@ import WithPrivateRoute from "./routes/PrivateRoute";
 import { AuthProvider, useAut } from "./context/authContext";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
+import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
+          <GlobalStyle />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

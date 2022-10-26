@@ -1,112 +1,102 @@
 import styled from "styled-components";
 
-export const HeroSection = styled.section`
-  /* margin-top: 3.5rem; */
-  /* height: 55vh; */
-  /* overflow: hidden; */
-  /* height: 100%;
-  width: 100%; */
-  /* border-bottom: 2px solid #001f54; */
-`;
-
-export const HeroContainer = styled.div`
-  height: 60vh;
-  width: 100%;
-  position: relative;
-  /* display: grid;
-  place-items: center; */
-`;
-
-export const HeroContainerBG = styled.div`
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-  /* position: absolute; */
-`;
-
-export const HeroSearch = styled.div`
-  background: #001d3d;
-  color: #fff;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  border-radius: 4px;
-  z-index: 9;
-`;
-
-export const HeroImage = styled.img`
+export const Hero__Section = styled.section`
   display: block;
-  object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* filter: brightness(50%); */
+  /* background: rgb(29, 49, 71); */
+  background: rgb(14, 24, 35);
+  /* background: var(--color-dark-variant); */
 `;
 
-export const HeroSearchTitle = styled.div`
-  text-align: center;
+export const Hero__Topper = styled.div`
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const Topper__HomeTitle = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  /* margin: 0 auto; */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald";
+  color: rgb(32, 180, 227);
   h1 {
-    font-size: 2rem;
+    .text-stroke {
+      color: transparent;
+      font-size: 6vw;
+      -webkit-text-stroke: 1px white; /* width and color */
+    }
+    span {
+      font-size: 9vw;
+    }
   }
   h2 {
-    font-weight: lighter;
-    font-size: 1.4rem;
-    margin: 0 0 1rem 0;
+    margin-top: -1.5vw;
+    /* color: rgb(158, 27, 52); */
+    font-size: 2.2vw;
   }
 `;
 
-export const HeroSearchInput = styled.div`
-  position: relative;
+export const Topper__Gallery = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+`;
+
+export const Gallery__Column = styled.div`
+  /* height: 1900px; */
   display: flex;
-  input {
-    display: block;
-    margin: 0;
-    padding: 0.5rem 1.1rem;
-    color: inherit;
-    width: 100%;
-    font-family: inherit;
-    font-size: 1.4rem;
-    font-weight: inherit;
-    line-height: 1.8;
-    border: none;
-    border-radius: 3px;
-    color: var(--color-dark);
-    &::placeholder {
-      color: #b0bec5;
-      font-weight: 300;
+  flex-direction: column;
+
+  animation: ${({ animationTime }) =>
+    animationTime
+      ? `slide1 ${animationTime} linear infinite`
+      : "slide1 70s linear infinite"};
+
+  figure {
+    flex: auto;
+    padding-bottom: 1rem;
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+      /* background: #0C141C; */
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
   }
 
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    padding: 0 1rem;
-    margin: 0 0 0 0.5rem;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    background: var(--color-secondary);
-    color: var(--color-primary);
-    font-size: 1.1rem;
-    font-weight: 400;
-
-    svg {
-      width: 2rem;
-      height: 2rem;
+  @keyframes slide1 {
+    0% {
+      transform: translate3d(0, 0%, 0);
     }
-
-    &:hover {
-      cursor: pointer;
-      background: rgb(0, 195, 255);
+    100% {
+      transform: translate3d(0, -50%, 0);
     }
+    /* 100% {
+    transform: translate3d(0, 0, 0);
+  } */
   }
 `;
-export const HeroSearchContent = styled.div``;
 
-export const HeroSearchContentCategories = styled.div``;
-
-export const HeroSearchContentResults = styled.div``;
+export const Hero__Latest = styled.div`
+  height: 100%;
+  width: 100%;
+`;

@@ -4,7 +4,6 @@ import {
   NavbarContainer,
   NavbarLogo,
   NavbarLinks,
-  NavbarLink,
   NavbarButton,
   NavbarMenu,
   NavbarProfile,
@@ -13,13 +12,13 @@ import {
 import NavbarImg from "../../images/jci-logo.png";
 import profileImg from "../../images/profile.jpg";
 import { nav_links } from "../../Data/navbar";
-import { NavLink } from "react-router-dom";
 import { HiUser } from "react-icons/hi";
 import { user_list } from "../../Data/users_list";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <NavbarSection height='60px' bgColor>
+    <NavbarSection height="100px" bgColor>
       <NavbarContainer>
         <NavbarLogo to="/">
           <img src={NavbarImg} alt="junior chamber international" />
@@ -28,9 +27,9 @@ export const Navbar = () => {
           <NavbarLinks>
             {nav_links?.map(({ name, path }, i) => {
               return (
-                <NavbarLink>
+                <li>
                   <NavLink to={path}>{name}</NavLink>
-                </NavbarLink>
+                </li>
               );
             })}
           </NavbarLinks>
