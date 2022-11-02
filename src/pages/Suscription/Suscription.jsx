@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { BsCheckLg } from "react-icons/bs";
 import Dashboard from "../../components/Dashboard/Dashboard";
+import SuscriptionModal from "./SuscriptionModal";
 
 const Suscription = () => {
   const suscripciones__colection = [
@@ -62,7 +63,141 @@ const Suscription = () => {
     <>
       <Dashboard>
         <h1>SUSCRIPCIONES</h1>
-        <br />
+        {/* <Table
+          bordered
+          shadow={false}
+          color="secondary"
+          aria-label="Example pagination  table"
+          css={{
+            height: "auto",
+            minWidth: "100%",
+          }}
+          selectionMode="multiple"
+        >
+          <Table.Header>
+            <Table.Column>Enero</Table.Column>
+            <Table.Column>Febrero</Table.Column>
+            <Table.Column>Marzo</Table.Column>
+            <Table.Column>Abril</Table.Column>
+            <Table.Column>Mayo</Table.Column>
+            <Table.Column>Junio</Table.Column>
+            <Table.Column>Julio</Table.Column>
+            <Table.Column>Agosto</Table.Column>
+            <Table.Column>Septiembre</Table.Column>
+            <Table.Column>Octubre</Table.Column>
+            <Table.Column>Noviembre</Table.Column>
+            <Table.Column>Diciembre</Table.Column>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row key="1">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="2">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="3">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="4">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="5">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="6">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            <Table.Row key="7">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>Tony Reichert</Table.Cell>
+            </Table.Row>
+            
+          </Table.Body>
+          <Table.Pagination
+            shadow
+            noMargin
+            align="center"
+            rowsPerPage={3}
+            onPageChange={(page) => console.log({ page })}
+          />
+        </Table> */}
+        {/* <br />
         <table>
           <thead>
             <tr>
@@ -294,7 +429,9 @@ const Suscription = () => {
               );
             })}
           </tbody>
-        </table>
+        </table> */}
+
+        <SuscriptionModal />
       </Dashboard>
     </>
     // <Dashboard__Section>

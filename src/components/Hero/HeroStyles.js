@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import imgBG from "../../assets/bg/image-aht5tus2.png";
 
 export const Hero__Section = styled.section`
   display: block;
@@ -6,10 +7,10 @@ export const Hero__Section = styled.section`
   height: 100vh;
   margin: auto;
   overflow: hidden;
-  /* filter: brightness(50%); */
   /* background: rgb(29, 49, 71); */
-  background: rgb(14, 24, 35);
-  /* background: var(--color-dark-variant); */
+  /* background: rgb(14, 24, 35); */
+  background: url(${imgBG});
+  /* filter: brightness(50%); */
 `;
 
 export const Hero__Topper = styled.div`

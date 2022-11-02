@@ -4,6 +4,8 @@ import Footer from "../../components/Footer/Footer";
 import Gallery from "../../components/Gallery/Gallery";
 import Hero from "../../components/Hero/Hero";
 import { Navbar } from "../../components/Navbar/Navbar";
+import Acknowledgments from "../../components/Sections/Acknowledgments";
+import Features from "../../components/Sections/Features";
 import SidebarHome from "../../components/Sidebar/SidebarHome";
 import { Global__Section } from "../../styles/layout";
 
@@ -11,12 +13,12 @@ const Home = () => {
   return (
     <>
       <Global__Section>
-        <Navbar />
+        {/* <Navbar /> */}
         <SidebarHome />
         <Hero />
-        {/* <Gallery /> */}
-        asdf
-        <Footer/>
+        <Features />
+        <Acknowledgments />
+        <Footer />
       </Global__Section>
     </>
   );

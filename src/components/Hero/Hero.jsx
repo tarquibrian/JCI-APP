@@ -45,7 +45,7 @@ const Hero = () => {
   return (
     <Hero__Section>
       <Hero__Topper>
-        <Topper__HomeTitle>
+        {/* <Topper__HomeTitle>
           <h1>
             <span>J</span>
             <span>C</span>
@@ -63,7 +63,7 @@ const Hero = () => {
             <span className="text-stroke">A</span>
           </h1>
           <h2>Cámara Junior Internacional</h2>
-        </Topper__HomeTitle>
+        </Topper__HomeTitle> */}
         <Topper__Gallery>
           {/* <Gallery__Column animationTime="130s">
             <figure className="item">

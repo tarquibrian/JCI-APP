@@ -72,6 +72,7 @@ export const NavbarLinks = styled.ul`
     border-radius: 4px;
     a {
       font-family: "Oswald";
+      font-size: 18px;
       color: var(--color-secondary);
       font-weight: 500;
       transition: 0.1s ease;
